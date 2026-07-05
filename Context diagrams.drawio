@@ -1,0 +1,189 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Data Governance" id="Sk87tsivcjFoLQekUr5X">
+    <mxGraphModel dx="1190" dy="2257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=24;fontStyle=1;align=center;" value="Data Governance" vertex="1">
+          <mxGeometry height="40" width="300" x="620" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" value="Purpose: Build Trust in Data" vertex="1">
+          <mxGeometry height="50" width="240" x="650" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;fontSize=12;" value="Discoverability&#xa;&#xa;- Metadata &amp; lineage available&#xa;- Business glossary&#xa;- Business-critical data correct &amp; complete&#xa;- Master data management" vertex="1">
+          <mxGeometry height="130" width="260" x="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;fontSize=12;" value="Security&#xa;&#xa;- Regulatory compliance&#xa;- Sensitive data (e.g. PII)&#xa;- Exfiltration prevention&#xa;- Scope depends on domain/dataset" vertex="1">
+          <mxGeometry height="130" width="260" x="640" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;fontSize=12;" value="Accountability&#xa;&#xa;- Data treated as a product&#xa;- Operating model for ownership&#xa;- Applies once discoverability &amp;&#xa;  security are in place" vertex="1">
+          <mxGeometry height="130" width="260" x="1000" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-7" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-8" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-9" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;dashed=1;" value="Primary activity in practice:&#xa;Classification (public / external / internal / restricted)&#xa;+ Access Control (create / read / update / delete)" vertex="1">
+          <mxGeometry height="60" width="400" x="620" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-11" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;dashed=1;" target="gmqYd4Fr5gueMSR-KX5n-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;" value="Governance Roles" vertex="1">
+          <mxGeometry height="30" width="200" x="280" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Governors&#xa;(e.g. HR)&#xa;specify policy" vertex="1">
+          <mxGeometry height="70" width="200" x="280" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Approvers / Data Stewards&#xa;(e.g. IT)&#xa;implement policy" vertex="1">
+          <mxGeometry height="70" width="220" x="600" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Users / Knowledge Workers&#xa;behavior shaped by policy" vertex="1">
+          <mxGeometry height="70" width="220" x="940" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-16" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" target="gmqYd4Fr5gueMSR-KX5n-14" value="policy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-17" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" target="gmqYd4Fr5gueMSR-KX5n-15" value="access">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;dashed=1;" value="Default stance (set by governance board):&#xa;Open - available to all knowledge workers&#xa;Closed - need-to-know only" vertex="1">
+          <mxGeometry height="70" width="260" x="1200" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;" value="Data Acquisition Workflow (Governance)" vertex="1">
+          <mxGeometry height="30" width="400" x="280" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Search by context / description" vertex="1">
+          <mxGeometry height="60" width="180" x="280" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Find relevant data store" vertex="1">
+          <mxGeometry height="60" width="180" x="490" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Request access with use case" vertex="1">
+          <mxGeometry height="60" width="180" x="700" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Steward reviews justification" vertex="1">
+          <mxGeometry height="60" width="180" x="910" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Access granted" vertex="1">
+          <mxGeometry height="60" width="180" x="1120" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-25" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-26" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-27" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-28" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="gmqYd4Fr5gueMSR-KX5n-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;" value="Three Related but Distinct Disciplines" vertex="1">
+          <mxGeometry height="30" width="400" x="280" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Data Security&#xa;&#xa;Prevents and blocks&#xa;unauthorized access" vertex="1">
+          <mxGeometry height="90" width="260" x="280" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Data Enablement&#xa;&#xa;Tools + knowledge to analyze&#xa;and process accessible data" vertex="1">
+          <mxGeometry height="90" width="260" x="600" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" value="Data Governance&#xa;&#xa;Policy + workflow + accountability&#xa;tying both together = trust" vertex="1">
+          <mxGeometry height="90" width="280" x="920" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-33" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" target="gmqYd4Fr5gueMSR-KX5n-31" value="builds on">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-34" edge="1" parent="1" source="gmqYd4Fr5gueMSR-KX5n-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=11;" target="gmqYd4Fr5gueMSR-KX5n-32" value="ties together">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;" value="Example: HR Data Classification" vertex="1">
+          <mxGeometry height="30" width="400" x="280" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=8;fontSize=11;fontFamily=Courier New;" value="Data Element                | Classification&#xa;Name                           | Internal&#xa;Date of hire              | Internal&#xa;Bank account details   | Restricted (Payroll group only)&#xa;Salary payments        | Restricted (Payroll group only)&#xa;Current salary          | Restricted (Direct manager only)" vertex="1">
+          <mxGeometry height="140" width="480" x="280" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Governors: HR&#xa;(specifies policy)" vertex="1">
+          <mxGeometry height="40" width="200" x="800" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Approvers: IT&#xa;(implements, e.g. group membership)" vertex="1">
+          <mxGeometry height="40" width="200" x="800" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="gmqYd4Fr5gueMSR-KX5n-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Users: Employees&#xa;(access shaped by policy)" vertex="1">
+          <mxGeometry height="40" width="200" x="800" y="1050" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dw7CKnU_hvz6wHAmxuz1" name="Overview Data Governance">
+    <mxGraphModel dx="793" dy="1504" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TTYW5tGhemykPbL3ah2p-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=20;fontStyle=1;align=center;" value="Data Governance — Overview" vertex="1">
+          <mxGeometry height="30" width="340" x="380" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;" value="Purpose: Trust in Data" vertex="1">
+          <mxGeometry height="50" width="240" x="430" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Discoverability" vertex="1">
+          <mxGeometry height="60" width="220" x="150" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Security" vertex="1">
+          <mxGeometry height="60" width="240" x="430" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Accountability" vertex="1">
+          <mxGeometry height="60" width="220" x="730" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-6" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-7" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-8" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;dashed=1;" value="Practice: Classification + Access Control" vertex="1">
+          <mxGeometry height="40" width="300" x="400" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Governors&#xa;define policy" vertex="1">
+          <mxGeometry height="60" width="200" x="150" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Approvers / Stewards&#xa;implement policy" vertex="1">
+          <mxGeometry height="60" width="200" x="450" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Users&#xa;access shaped by policy" vertex="1">
+          <mxGeometry height="60" width="200" x="750" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-13" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-14" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Data Security&#xa;blocks unauthorized access" vertex="1">
+          <mxGeometry height="70" width="250" x="150" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" value="Data Enablement&#xa;tools to analyze accessible data" vertex="1">
+          <mxGeometry height="70" width="250" x="430" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" value="Data Governance&#xa;policy + accountability ties both together" vertex="1">
+          <mxGeometry height="70" width="250" x="710" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-18" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTYW5tGhemykPbL3ah2p-19" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
