@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="6">
+<mxfile host="app.diagrams.net" pages="5">
   <diagram name="Data Governance" id="Sk87tsivcjFoLQekUr5X">
     <mxGraphModel dx="1190" dy="2257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -319,8 +319,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="CQ_nk7IlqbFRS-9Fzw31" name="Page-5">
-    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+  <diagram id="CQ_nk7IlqbFRS-9Fzw31" name="Lineage - Overview">
+    <mxGraphModel dx="1994" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -363,14 +363,6 @@
         <mxCell id="grbyH0uhHN_hyPcTlw6U-13" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="93ocAyea5mswHdZQRdXC" name="Page-6">
-    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
