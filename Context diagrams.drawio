@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="2">
+<mxfile host="app.diagrams.net" pages="6">
   <diagram name="Data Governance" id="Sk87tsivcjFoLQekUr5X">
     <mxGraphModel dx="1190" dy="2257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -183,6 +183,194 @@
         <mxCell id="TTYW5tGhemykPbL3ah2p-19" edge="1" parent="1" source="TTYW5tGhemykPbL3ah2p-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="TTYW5tGhemykPbL3ah2p-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc7f8tYPbcZlCi2tyeuJ" name="ETL - Detalle">
+    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=18;fontStyle=1;align=center;" value="Pipeline de Datos y Governance (ETL/ELT) — Detallado" vertex="1">
+          <mxGeometry height="30" width="600" x="450" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;fontStyle=1;align=center;" value="EXTRACT" vertex="1">
+          <mxGeometry height="40" width="380" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=left;spacingLeft=8;" value="Se retira la data del sistema origen&#xa;(BD legacy, archivo, resultado de web crawler)&#xa;&#xa;Etapa separada porque es lenta:&#xa;permite que etapas siguientes trabajen en&#xa;batch/paralelo mientras la extraccion continua" vertex="1">
+          <mxGeometry height="130" width="380" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0e0f0;strokeColor=#6c8ebf;fontSize=11;align=left;spacingLeft=8;dashed=1;" value="Staging Area&#xa;no accesible a usuarios de negocio&#xa;&#xa;Data owners / stewards validan:&#xa;- completitud de registros&#xa;- exactitud vs. valores esperados" vertex="1">
+          <mxGeometry height="110" width="380" x="80" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-5" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacingLeft=8;" value="Mejor momento para validar:&#xa;aun se tiene el contexto del&#xa;sistema origen" vertex="1">
+          <mxGeometry height="70" width="380" x="80" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-7" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;fontStyle=1;align=center;" value="TRANSFORM" vertex="1">
+          <mxGeometry height="40" width="380" x="560" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;align=left;spacingLeft=8;" value="Normalizacion:&#xa;- eliminar outliers&#xa;- unir registros de multiples fuentes&#xa;- agregar valores&#xa;- dividir una columna en varias" vertex="1">
+          <mxGeometry height="110" width="380" x="560" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;align=left;spacingLeft=8;fontStyle=1;" value="MAYOR RIESGO DE GOVERNANCE&#xa;&#xa;Limpiar tambien destruye informacion&#xa;cuyo valor futuro no fue anticipado.&#xa;La accion es irreversible una vez&#xa;corrido el pipeline." vertex="1">
+          <mxGeometry height="120" width="380" x="560" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-11" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;align=left;spacingLeft=8;" value="Mitigacion: crear un scorecard por fuente&#xa;al momento de extraccion&#xa;- que contexto de informacion existe&#xa;- que se pierde en la transformacion" vertex="1">
+          <mxGeometry height="80" width="380" x="560" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-13" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;fontStyle=1;align=center;" value="LOAD" vertex="1">
+          <mxGeometry height="40" width="380" x="1040" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=left;spacingLeft=8;" value="Se coloca la data transformada&#xa;en el destino final&#xa;(BigQuery, Snowflake, Redshift, etc.)" vertex="1">
+          <mxGeometry height="80" width="380" x="1040" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=left;spacingLeft=8;dashed=1;" value="ELT: si la transformacion ocurre&#xa;despues de cargar (dentro del warehouse),&#xa;el detalle crudo se preserva mas tiempo,&#xa;reduciendo el riesgo de perdida prematura" vertex="1">
+          <mxGeometry height="100" width="380" x="1040" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-17" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-18" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" target="tNkjHhdLUbmqTxtutdYb-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-19" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeWidth=2;" target="tNkjHhdLUbmqTxtutdYb-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;align=center;" value="Principio central: mantener origen, consistencia y completitud a lo largo de todo el pipeline = confianza" vertex="1">
+          <mxGeometry height="50" width="1340" x="80" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;" value="Ejemplo: retail, transacciones POS" vertex="1">
+          <mxGeometry height="30" width="400" x="80" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=left;spacingLeft=8;" value="Extract:&#xa;stewards validan que cada registro&#xa;tenga ID, timestamp y monto" vertex="1">
+          <mxGeometry height="90" width="380" x="80" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;align=left;spacingLeft=8;" value="Transform:&#xa;se agregan transacciones por cliente/dia,&#xa;eliminando el detalle linea por linea" vertex="1">
+          <mxGeometry height="90" width="380" x="560" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;align=left;spacingLeft=8;" value="Problema posterior:&#xa;equipo de fraude necesita el detalle&#xa;de secuencia/timing por dia y ya no existe" vertex="1">
+          <mxGeometry height="90" width="380" x="1040" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-25" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-26" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;align=center;" value="Solucion aplicada: se debe re-extraer desde el sistema legacy original — trabajo extra que un scorecard habria podido anticipar" vertex="1">
+          <mxGeometry height="50" width="1340" x="80" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="tNkjHhdLUbmqTxtutdYb-28" edge="1" parent="1" source="tNkjHhdLUbmqTxtutdYb-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="tNkjHhdLUbmqTxtutdYb-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="NRpi_uSF7ooXPysPsqbX" name="ETL - Overview">
+    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XICtdOJjYJJY0K8lD88N-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=18;fontStyle=1;align=center;" value="Pipeline de Datos y Governance (ETL/ELT)" vertex="1">
+          <mxGeometry height="30" width="500" x="190" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Extract&#xa;retirar datos del origen" vertex="1">
+          <mxGeometry height="70" width="220" x="50" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;" value="Transform&#xa;normalizar, limpiar, agregar" vertex="1">
+          <mxGeometry height="70" width="220" x="350" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" value="Load&#xa;cargar en el destino final" vertex="1">
+          <mxGeometry height="70" width="220" x="650" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-6" edge="1" parent="1" source="XICtdOJjYJJY0K8lD88N-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="XICtdOJjYJJY0K8lD88N-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-7" edge="1" parent="1" source="XICtdOJjYJJY0K8lD88N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="XICtdOJjYJJY0K8lD88N-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;dashed=1;" value="ELT: transform ocurre despues de load, dentro del warehouse" vertex="1">
+          <mxGeometry height="40" width="330" x="360" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-9" edge="1" parent="1" source="XICtdOJjYJJY0K8lD88N-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;" target="XICtdOJjYJJY0K8lD88N-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Mayor riesgo de governance: la limpieza destruye informacion de forma irreversible" vertex="1">
+          <mxGeometry height="60" width="220" x="350" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-11" edge="1" parent="1" source="XICtdOJjYJJY0K8lD88N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="XICtdOJjYJJY0K8lD88N-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XICtdOJjYJJY0K8lD88N-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;fontStyle=1;" value="Principio central: mantener origen, consistencia y completitud = confianza" vertex="1">
+          <mxGeometry height="50" width="440" x="250" y="780" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="CQ_nk7IlqbFRS-9Fzw31" name="Page-5">
+    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=18;fontStyle=1;align=center;" value="Data Lineage (Provenance)" vertex="1">
+          <mxGeometry height="30" width="400" x="250" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=center;" value="Registro del camino que recorre la data&#xa;a traves de ETL y otros movimientos" vertex="1">
+          <mxGeometry height="50" width="400" x="250" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Por que existe&#xa;este dataset?" vertex="1">
+          <mxGeometry height="60" width="220" x="170" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="De donde&#xa;vino la data?" vertex="1">
+          <mxGeometry height="60" width="220" x="510" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-5" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-6" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Preserva: Calidad&#xa;confiabilidad de la fuente" vertex="1">
+          <mxGeometry height="60" width="220" x="170" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Preserva: Sensibilidad&#xa;PII, nivel de exposicion" vertex="1">
+          <mxGeometry height="60" width="220" x="510" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-9" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-10" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;align=center;" value="Permite decidir: mezclar fuentes, otorgar acceso, y a quien" vertex="1">
+          <mxGeometry height="50" width="400" x="250" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-12" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grbyH0uhHN_hyPcTlw6U-13" edge="1" parent="1" source="grbyH0uhHN_hyPcTlw6U-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="grbyH0uhHN_hyPcTlw6U-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="93ocAyea5mswHdZQRdXC" name="Page-6">
+    <mxGraphModel dx="1169" dy="1090" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
